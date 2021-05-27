@@ -1,19 +1,24 @@
 import './style.css';
 
-document.querySelector('.display').textContent = '1234';
-
 const display = document.querySelector('.display');
 const keyButtons = document.querySelectorAll('.keyboard__button');
+
+let password = [];
 
 keyButtons.forEach(keyButton => {
   keyButton.addEventListener('click', () => {
     const keyNumber = keyButton.getAttribute('data-value');
     if (keyNumber == -99) {
-      display.innerHTML = '';
+      reset();
+    } else if (keyNumber == 99) {
+      display.textContent = password;
+    } else {
+      password += keyNumber;
     }
   });
 });
 
 const reset = () => {
-  display.innerHTML = '';
+  display.textContent = '';
+  password = '';
 };
