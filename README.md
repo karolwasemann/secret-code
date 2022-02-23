@@ -33,4 +33,3 @@ Tips:
 * Buttons are referenced by the `keyboard__button` class.
 * Get the value of the button from the `data-value` attribute - based on the value you should decide if you are working with a numeric button or a function button
 
-Translated with www.DeepL.com/Translator (free version)
